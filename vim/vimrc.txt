@@ -1,0 +1,79 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'mattn/emmet-vim'
+" ***** to change default shortcut for Emmet *****
+let g:user_emmet_expandabbr_key = '<A-Tab>'
+
+Plugin 'kchmck/vim-coffee-script'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+"Plugin 'L9'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+"Plugin 'user/L9', {'name': 'newL9'}
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+syntax on
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+
+
+" Configuration file for vim
+set modelines=0		" CVE-2007-2438
+
+" Normally we use vim-extensions. If you want true vi-compatibility
+" remove change the following statements
+set nocompatible	" Use Vim defaults instead of 100% vi compatibility
+set autoindent " automatically having same indents with previous line
+set smartindent "in new line take indents automatically
+set showmatch " when type end parenthece, highlight start parenthece
+set wildmenu " show wildmenu
+set incsearch " search as characters are entered
+set ignorecase " ignore cases when search
+set hlsearch " highlight searched word
+set smartcase " when search ignore cases
+set showcmd " show command in bottom bar
+set lazyredraw "redraw only when we need to
+set tabstop=2 " indents when type tab
+set shiftwidth=2 " indents when type tab
+set backspace=2		" more powerful backspacing
+set expandtab "Exchange Tab to space
+set number " Put line number
+set clipboard=unnamed,autoselect "yank to copy on clipboard
+let macvim_skip_colorscheme=1 " Disable macvim original color scheme
+autocmd FileType php colorscheme ToshPhp
+colorscheme Tosh
+syntax on
+
+" Don't write backup file if vim is being called by "crontab -e"
+au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
+" Don't write backup file if vim is being called by "chpass"
+au BufWrite /private/etc/pw.* set nowritebackup nobackup

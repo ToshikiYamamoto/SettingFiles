@@ -1,0 +1,10 @@
+vim setting
+
+Plugins
+  Emmet
+https://github.com/mattn/emmet-vim
+let g:user_emmet_expandabbr_key = ‘<A-Tab>'
+let g:user_emmet_leader_key=‘,’
+
+  CoffeeScript
+https://github.com/kchmck/vim-coffee-script

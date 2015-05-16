@@ -1,0 +1,30 @@
+Package Controller.sublime-settings:
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"CoffeeScript",
+		"Color Highlighter",
+		"Emmet",
+		"FindKeyConflicts",
+		"HTML Snippets",
+		"JavaScript Snippets",
+		"jQuery Mobile 1.4 Snippets",
+		"Package Control",
+		"Phpcs",
+		"Rails File Switcher",
+		"Ruby on Rails snippets",
+		"Sass",
+		"SASS Snippets",
+		"SublimeLinter",
+		"Syntax Highlighting for Sass",
+		"View In Browser"
+	]
+}
+
+Make Emmet cmd from "ctrl+e" to "tab+alt"
+-> change keybindings in package > emmet
+
